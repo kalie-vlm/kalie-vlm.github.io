@@ -233,7 +233,7 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Building generalist robotic systems involves effectively endowing robots the capabilities to handle novel objects in an open-world setting. Inspired by the advances of large pre-trained models, we propose Keypoint Affordance Learning from Imagined Environments (KALIE), which adapts pre-trained Vision Language Models (VLMs) for robotic control in a scalable manner. Instead of directly producing motor commands, KALIEcontrols the robot by predicting point-based affordance representations based on natural language instructions and visual observations of the scene. The VLM is trained on 2D images with affordances labeled by humans, bypassing the need for training data collected on robotic systems. Through an affordance-aware data synthesis pipeline, KALIE automatically creates massive high-quality training data based on limited example data manually collected by humans. We demonstrate that KALIE can learn to robustly solve new manipulation tasks with unseen objects given only 50 example data points. Compared to baselines using pre-trained VLMs, our approach consistently achieves superior performance.            <!--   We present MOKA, an approach that employs VLMs' reasoning capabilities for robotic manipulation in open-vocabulary settings. -->
+              Building generalist robotic systems involves effectively endowing robots the capabilities to handle novel objects in an open-world setting. Inspired by the advances of large pre-trained models, we propose Keypoint Affordance Learning from Imagined Environments (KALIE), which adapts pre-trained Vision Language Models (VLMs) for robotic control in a scalable manner. Instead of directly producing motor commands, KALIE controls the robot by predicting point-based affordance representations based on natural language instructions and visual observations of the scene. The VLM is trained on 2D images with affordances labeled by humans, bypassing the need for training data collected on robotic systems. Through an affordance-aware data synthesis pipeline, KALIE automatically creates massive high-quality training data based on limited example data manually collected by humans. We demonstrate that KALIE can learn to robustly solve new manipulation tasks with unseen objects given only 50 example data points. Compared to baselines using pre-trained VLMs, our approach consistently achieves superior performance.            <!--   We present MOKA, an approach that employs VLMs' reasoning capabilities for robotic manipulation in open-vocabulary settings. -->
             <!--   At the heart of our approach is a compact point-based representation of affordance and motion that bridges -->
             <!--   the VLM's predictions on RGB images and the robot's motions in the physical world. -->
             <!-- [> </p> <] -->
@@ -310,80 +310,9 @@
         <h2 class="title is-3">Tasks</h2>
         
         <p class="content has-text-justified">
-          Given free-form descriptions of the tasks, MOKA can effectively predict the point-based affordance representations and generates the desired motions.
+          We demonstrate that KALIE can solve new manipulation tasks with unseen objects given only 50 example data points. 
         </p>
         
-        <div class="rows">
-          <div class="columns">
-            <div class="column has-text-justified">
-              <video id="dist1" controls="" muted="" autoplay="" loop="" width="99%">
-                <source src="videos/moka_task_0_0.mp4" type="video/mp4">
-              </video>
-              <p style="text-align:left">
-                "Move the eyeglasses onto the yellow cloth and use the brush to sweep the snack package to the right side of the table."
-              </p>
-              <p style="text-align:center">
-								(Subtask 1)
-              </p>
-            </div>
-        
-            <div class="column has-text-centered">
-              <video id="dist2" controls="" muted="" autoplay="" loop="" width="99%">
-                <source src="videos/moka_task_1_0.mp4" type="video/mp4">
-              </video>
-              <p style="text-align:left">
-                "Use the ultrasound cleaner to clean the metal watch. The unstrasound cleaner has no lid and can be turned on by pressing the red button."
-              </p>
-              <p style="text-align:center">
-								(Subtask 1)
-              </p>
-            </div>
-        
-            <div class="column has-text-centered">
-              <video id="dist2" controls="" muted="" autoplay="" loop="" width="99%">
-                <source src="videos/moka_task_a0.mp4" type="video/mp4">
-              </video>
-              <p style="text-align:left">
-                "Close the drawer."
-              </p>
-            </div>
-          </div>
-
-          <div class="columns">
-            <div class="column has-text-centered">
-              <video id="dist1" controls="" muted="" autoplay="" loop="" width="99%">
-                <source src="videos/moka_task_0_1.mp4" type="video/mp4">
-              </video>
-              <p style="text-align:left">
-                "Move the eyeglasses onto the yellow cloth and use the brush to sweep the snack package to the right side of the table."
-              </p>
-              <p style="text-align:center">
-								(Subtask 2)
-              </p>
-            </div>
-        
-            <div class="column has-text-centered">
-              <video id="dist2" controls="" muted="" autoplay="" loop="" width="99%">
-                <source src="videos/moka_task_1_1.mp4" type="video/mp4">
-              </video>
-              <p style="text-align:left">
-                "Use the ultrasound cleaner to clean the metal watch. The unstrasound cleaner has no lid and can be turned on by pressing the red button."
-              </p>
-              <p style="text-align:center">
-								(Subtask 2)
-              </p>
-            </div>
-        
-            <div class="column has-text-centered">
-              <video id="dist2" controls="" muted="" autoplay="" loop="" width="99%">
-                <source src="videos/moka_task_a1.mp4" type="video/mp4">
-              </video>
-              <p style="text-align:left">
-                "Insert the pink roses into the vase."
-              </p>
-            </div>
-          </div>
-
         <div class="rows">
           <div class="columns">
             <div class="column has-text-centered">
@@ -393,9 +322,6 @@
               <p style="text-align:left">
                 "Make a gift box containing the perfurme bottle. Put some golden filler beneath the perfume."
               </p>
-              <p style="text-align:center">
-								(Subtask 1)
-              </p>
             </div>
         
             <div class="column has-text-centered">
@@ -404,9 +330,6 @@
               </video>
               <p style="text-align:left">
                 "Unplug the charge cable and close the lid of the laptop."
-              </p>
-              <p style="text-align:center">
-								(Subtask 1)
               </p>
             </div>
         
@@ -428,9 +351,6 @@
               <p style="text-align:left">
                 "Make a gift box containing the perfurme bottle. Put some golden filler beneath the perfume."
               </p>
-              <p style="text-align:center">
-								(Subtask 2)
-              </p>
             </div>
         
             <div class="column has-text-centered">
@@ -439,9 +359,6 @@
               </video>
               <p style="text-align:left">
                 "Unplug the charge cable and close the lid of the laptop."
-              </p>
-              <p style="text-align:center">
-								(Subtask 2)
               </p>
             </div>
         
