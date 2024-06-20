@@ -279,21 +279,21 @@
           </div>
 
           <h2 class="content has-text-justified">
-						On the <b>high level</b>, the VLM is prompted to decompose the free-form language description of the task into a sequence of subtasks and summarize the subtask information. 
-						<!-- </br> -->
-						On the <b>low level</b>, the VLM produces the point-based affordance representation based on the marked image. 
+						The VLM takes in as inputs an observation image along with a custom prompt containing the task instruction. It then produces the point-based affordance representation used by the robot to complete the motion.
+            
+            Following MOKA's approach, we use a point-based affordance representation to translate the VLM’s predictions on 2D images to the robot’s motion in the physical world. We use a set of five keypoints and waypoints to specify the robot’s motions for a wide range of tasks. 
           </h2>
 
         <!-- </div> -->
       </div>
     </div>
 
-    <div class="my-block">
+    <!-- <div class="my-block"> -->
       <!-- <div class="columns is-centered has-text-centered"> -->
-        <div class="column is-full-width">
+        <!-- <div class="column is-full-width">
           <h2 class="title is-3">Point-based Affordance Representations</h2>
           <h2 class="content has-text-justified">
-            To bridge the VLM’s predictions on 2D images and the robot’s motion in the physical world, we introduce a point-based affordance representation. Using a set of keypoints and waypoints, we can specify the robot’s motions for a wide range of tasks. 
+            Following MOKA's approach, we use a point-based affordance representation to translate the VLM’s predictions on 2D images to the robot’s motion in the physical world. We use a set of five keypoints and waypoints to specify the robot’s motions for a wide range of tasks. 
           </h2>
           <div>
           <img src="images/affordances.png"
@@ -301,9 +301,9 @@
                      alt="Interpolation end reference image."
                      />
           </div>
-        </div>
+        </div> -->
       <!-- </div> -->
-    </div>
+    <!-- </div> -->
 
     <!-- <div class="container is-max-widescreen"> -->
     <div class="my-block">
