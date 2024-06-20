@@ -260,14 +260,20 @@
     <div class="my-block">
       <!-- <div class="columns is-centered has-text-centered"> -->
         <div class="column is-full-width">
-          <h2 class="title is-3">Marking Open-vocabulary Keypoint Affordances (MOKA)</h2>
+          <h2 class="title is-3">Keypoint Affordance Learning from Imagined Environments (KALIE)</h2>
 
           <h2 class="content has-text-justified">
-            MOKA employs VLMs in a <b>hierarchical visual prompting</b> framework, which converts the affordance reasoning problem into a series of visual question problems that are feasible for the VLM to address.
+            Along with our VLM training framework we also propose an affordance-aware data synthesis pipeline to generate diverse training data without extensive human supervision.
           </h2>
 
           <div>
-            <img src="images/model.png"
+            <img src="images/model_pipeline.png"
+                       class="interpolation-image"
+                       alt="Interpolation end reference image."/>
+          </div>
+
+          <div>
+            <img src="images/diffusion_pipeline.png"
                        class="interpolation-image"
                        alt="Interpolation end reference image."/>
           </div>
@@ -345,7 +351,7 @@
 
           <div class="columns">
             <div class="column has-text-centered">
-              <video id="dist1" controls="" muted="" autoplay="" loop="" width="70%">
+              <video id="dist1" controls="" muted="" autoplay="" loop="" width="65%">
                 <source src="videos/pouring_07_success-ezgif.com-video-speed.mov" type="video/mp4">
               </video>
               <p style="text-align:center">
@@ -354,7 +360,7 @@
             </div>
         
             <div class="column has-text-centered">
-              <video id="dist2" controls="" muted="" autoplay="" loop="" width="70%">
+              <video id="dist2" controls="" muted="" autoplay="" loop="" width="65%">
                 <source src="videos/moka_task_3_1.mp4" type="video/mp4">
               </video>
               <p style="text-align:center">
