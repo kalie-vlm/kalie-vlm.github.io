@@ -59,7 +59,7 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">KALIE: Fine-Tuning Vision-Language Models for Open-World Manipulation without Robot Data</h1>
-          <div class="is-size-5 publication-authors">
+          <!-- <div class="is-size-5 publication-authors"> -->
             <!-- <span class="author-block">
               <a>Grace Tang*</a></span>,
             <span class="author-block">
@@ -76,7 +76,7 @@
             <span class="author-block">
               <a href="https://kuanfang.github.io">Kuan Fang†</a>
             </span> -->
-          </div>
+          <!-- </div> -->
 
           <!-- <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>*</sup> denotes equal contribution</span>
@@ -103,7 +103,7 @@
                 </a>
               </span>
               <!-- arXiv Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://kalie-vlm.github.io/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -111,9 +111,9 @@
                   </span>
                   <span>arXiv (Coming soon)</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Code Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://kalie-vlm.github.io/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -121,7 +121,7 @@
                   </span>
                   <span>Code (Coming soon)</span>
                   </a>
-              </span>
+              </span> -->
             </div>
 
           </div>
@@ -148,6 +148,9 @@
   <div class="container is-fullhd">
     <div class="hero-body">
       <div class="container">
+        <h2 class="subtitle has-text-justified">
+          <b>KALIE</b> outlines a framework to efficiently fine-tune pre-trained VLMs to predict point-based affordances for various manipulation tasks.
+        </h2>
         <div class="columns is-vcentered  is-centered">
           <video id="teaser" autoplay muted loop height="70%" width="70%">
             <source src="videos/final_screencast_kalie_2x.mp4"
@@ -155,9 +158,6 @@
           </video>
           </br>
         </div>
-        <h2 class="subtitle has-text-justified">
-        <b>KALIE</b> outlines a framework to efficiently fine-tune pre-trained VLMs to predict point-based affordances for various manipulation tasks.
-        </h2>
       </div>
     </div>
   </div>
@@ -264,6 +264,10 @@
 
           <h2 class="content has-text-justified">
             Along with our VLM training framework we also propose an affordance-aware data synthesis pipeline to generate diverse training data without extensive human supervision.
+
+						The VLM takes in as inputs an observation image along with a custom prompt containing the task instruction. It then produces the point-based affordance representation used by the robot to complete the motion.
+            
+            Following MOKA's approach, we use a point-based affordance representation to translate the VLM’s predictions on 2D images to the robot’s motion in the physical world. We use a set of five keypoints and waypoints to specify the robot’s motions for a wide range of tasks. 
           </h2>
 
           <div>
@@ -277,12 +281,6 @@
                        class="interpolation-image"
                        alt="Interpolation end reference image."/>
           </div>
-
-          <h2 class="content has-text-justified">
-						The VLM takes in as inputs an observation image along with a custom prompt containing the task instruction. It then produces the point-based affordance representation used by the robot to complete the motion.
-            
-            Following MOKA's approach, we use a point-based affordance representation to translate the VLM’s predictions on 2D images to the robot’s motion in the physical world. We use a set of five keypoints and waypoints to specify the robot’s motions for a wide range of tasks. 
-          </h2>
 
         <!-- </div> -->
       </div>
