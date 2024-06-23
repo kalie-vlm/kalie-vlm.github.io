@@ -264,17 +264,20 @@
           
           <h3 class="title is-4">Affordance-Aware Data Synthesis</h3>
 
+          <h3 class="content has-text-justified">
+            We propose an affordance-aware data synthesis pipeline to generate diverse training data without extensive human supervision.
+          </h3>
+
           <div>
             <img src="images/diffusion_pipeline.png"
                        class="interpolation-image"
                        alt="Interpolation end reference image."/>
           </div>
 
+          <h3 class="title is-4">VLM Training Framework</h3>
 
           <h3 class="content has-text-justified">
-            Along with our VLM training framework we also propose an affordance-aware data synthesis pipeline to generate diverse training data without extensive human supervision.
-            
-						The VLM takes in as inputs an observation image along with a custom prompt containing the task instruction. It then produces the point-based affordance representation used by the robot to complete the motion.
+            The VLM takes in as inputs an observation image along with a custom prompt containing the task instruction. It then produces the point-based affordance representation used by the robot to complete the motion.
             
             Following MOKA's approach, we use a point-based affordance representation to translate the VLM’s predictions on 2D images to the robot’s motion in the physical world. We use a set of five keypoints and waypoints to specify the robot’s motions for a wide range of tasks. 
           </h3>
