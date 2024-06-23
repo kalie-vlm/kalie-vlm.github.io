@@ -148,9 +148,6 @@
   <div class="container is-fullhd">
     <div class="hero-body">
       <div class="container">
-        <h2 class="subtitle has-text-justified">
-          <b>KALIE</b> outlines a framework to efficiently fine-tune pre-trained VLMs to predict point-based affordances for various manipulation tasks.
-        </h2>
         <div class="columns is-vcentered  is-centered">
           <video id="teaser" autoplay muted loop height="70%" width="70%">
             <source src="videos/final_screencast_kalie_2x.mp4"
@@ -158,6 +155,9 @@
           </video>
           </br>
         </div>
+        <h2 class="subtitle has-text-justified">
+        <b>KALIE</b> outlines a framework to efficiently fine-tune pre-trained VLMs to predict point-based affordances for various manipulation tasks.
+        </h2>
       </div>
     </div>
   </div>
@@ -261,23 +261,26 @@
       <!-- <div class="columns is-centered has-text-centered"> -->
         <div class="column is-full-width">
           <h2 class="title is-3">Keypoint Affordance Learning from Imagined Environments (KALIE)</h2>
-
-          <h2 class="content has-text-justified">
-            Along with our VLM training framework we also propose an affordance-aware data synthesis pipeline to generate diverse training data without extensive human supervision.
-
-						The VLM takes in as inputs an observation image along with a custom prompt containing the task instruction. It then produces the point-based affordance representation used by the robot to complete the motion.
-            
-            Following MOKA's approach, we use a point-based affordance representation to translate the VLM’s predictions on 2D images to the robot’s motion in the physical world. We use a set of five keypoints and waypoints to specify the robot’s motions for a wide range of tasks. 
-          </h2>
+          
+          <h3 class="title is-3">Affordance-Aware Data Synthesis</h3>
 
           <div>
-            <img src="images/model_pipeline.png"
+            <img src="images/diffusion_pipeline.png"
                        class="interpolation-image"
                        alt="Interpolation end reference image."/>
           </div>
 
+
+          <h3 class="content has-text-justified">
+            Along with our VLM training framework we also propose an affordance-aware data synthesis pipeline to generate diverse training data without extensive human supervision.
+            
+						The VLM takes in as inputs an observation image along with a custom prompt containing the task instruction. It then produces the point-based affordance representation used by the robot to complete the motion.
+            
+            Following MOKA's approach, we use a point-based affordance representation to translate the VLM’s predictions on 2D images to the robot’s motion in the physical world. We use a set of five keypoints and waypoints to specify the robot’s motions for a wide range of tasks. 
+          </h3>
+
           <div>
-            <img src="images/diffusion_pipeline.png"
+            <img src="images/model_pipeline.png"
                        class="interpolation-image"
                        alt="Interpolation end reference image."/>
           </div>
