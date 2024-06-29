@@ -280,7 +280,7 @@
           <h3 class="title is-4">Affordance-Aware Data Synthesis</h3>
 
           <h3 class="content has-text-justified">
-            We propose an affordance-aware data synthesis pipeline to generate diverse training data without extensive human supervision.
+            We propose an affordance-aware data synthesis pipeline to generate diverse training data without extensive human supervision. As shown in the figure below, we start with an expert-annotated image. Then, we use Grounding SAM to generate a segmentation mask, and preprocess the image around the mask area to yield a context of soft contours. Then, we apply a series of random transformations to the contour context. We also apply these same transformations to the segmentation mask, then add it to the original to form the final inpainting mask. Finally, we inpaint the image using Stable Diffusion and the inpainting mask to generate the synthetic data.
           </h3>
 
           <div>
@@ -288,40 +288,34 @@
                        class="interpolation-image"
                        alt="Interpolation end reference image."/>
           </div>
+          <h3 class="content has-text-justified">
+            Below is an example of generated synthetic data for our five tasks. We use the VLM to generate a series of diffusion prompts to create the diverse training data.
+          </h3>
+          
+          <div class="columns is-centered has-text-centered">
+            <img src="images/imagination_examples_supplementary.png"
+                      class="interpolation-image"
+                      alt="Interpolation end reference image."
+                      style="width: 100%;"
+                      />
+            </div>
+          </div>
 
-        <!-- </div> -->
       </div>
     </div>
-
-    <!-- <div class="my-block"> -->
-      <!-- <div class="columns is-centered has-text-centered"> -->
-        <!-- <div class="column is-full-width">
-          <h2 class="title is-3">Point-based Affordance Representations</h2>
-          <h2 class="content has-text-justified">
-            Following MOKA's approach, we use a point-based affordance representation to translate the VLM’s predictions on 2D images to the robot’s motion in the physical world. We use a set of five keypoints and waypoints to specify the robot’s motions for a wide range of tasks. 
-          </h2>
-          <div>
-          <img src="images/affordances.png"
-                     class="interpolation-image"
-                     alt="Interpolation end reference image."
-                     />
-          </div>
-        </div> -->
-      <!-- </div> -->
-    <!-- </div> -->
 
     <div class="my-block">
       <div class="column is-full-width">
         <h2 class="title is-3">Synthetic Data</h2>
         <div>
-        <div class="columns is-centered has-text-centered">
-          <img src="images/imagination_examples_supplementary.png"
-                     class="interpolation-image"
-                     alt="Interpolation end reference image."
-                     style="width: 100%;"
-                     />
+          <!-- <div class="columns is-centered has-text-centered">
+            <img src="images/imagination_examples_supplementary.png"
+                      class="interpolation-image"
+                      alt="Interpolation end reference image."
+                      style="width: 100%;"
+                      />
             </div>
-          </div>
+          </div> -->
       </div>
     </div>
 
