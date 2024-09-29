@@ -7,6 +7,7 @@
   <meta name="keywords" content="Vision-Language Model, Data Synthesis, Fine-Tuning, Manipulation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>KALIE</title>
+	<!-- <link rel="icon" type="image/png" href="images/robot_artist.png"/> -->
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -146,10 +147,26 @@
   <div class="container is-fullhd">
     <div class="hero-body">
       <div class="container">
+        <div class="columns is-vcentered  is-centered">
+          <video id="teaser" autoplay muted loop height="70%" width="70%">
+            <source src="videos/teaser_v2.mp4"
+                    type="video/mp4">
+          </video>
+          <!-- <img src="images/teaser_v2.gif" -->
+          <!--            class="interpolation-image" -->
+          <!--            alt="Interpolation end reference image."/> -->
+          </br>
+        </div>
+        <h2 class="subtitle has-text-justified">
+          KALIE fine-tunes a pre-trained VLM to predict the <b>point-based affordance representation</b> for solving novel manipulation tasks. Using only <b>limited demonstrations</b> collected and annotated by humans, KALIE generates synthetic data with <b>high diversity</b>, while staying faithful to the <b>task semantics</b> and <b>annotated keypoints</b>. Training on the mixture of collected and synthetic data, KALIE significantly improves the VLM's prediction performance on out-of-distribution objects and initial poses.
+        </h2>
       </div>
     </div>
   </div>
 </section>
+
+
+<hr>
 
 
 <section class="section">
@@ -221,6 +238,21 @@
     <div class="my-block">
       <div class="column is-full-width">
         <h2 class="title is-3">Synthetic Data</h2>
+
+          <h3 class="content has-text-justified">
+            KALIE diversifies the <b>shape</b>, <b>texture</b>, and <b>poses</b> of the objects in the environment. Below, we progressively change the transformation parameters of the context and the input noises to the diffusion model to show the diversity and quality of the synthetic images.
+          </h3>
+          <div>
+            <div align="center">
+              <img src="images/transition.gif"
+                         style="width: 900px;"
+                         class="interpolation-image"
+                         alt="Interpolation end reference image."/>
+            </div>
+          </div>
+
+          </br>
+
 
           <h3 class="content has-text-justified">
             In each column, we show example synthetic images generated based on two example images respectively for the same task. The original and transformed point-based affordances are plotted on top of the images.
